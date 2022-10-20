@@ -1,4 +1,4 @@
-" Sample code from the blog post https://jacekw.dev/blog/2022/oauth-from-abap-on-premise/
+" Sample code from the blog post https://jacekw.dev/blog/2022/oauth-client-credentials-from-abap-on-premise
 CLASS zcl_oauth_destinations DEFINITION PUBLIC FINAL CREATE PUBLIC.
   PUBLIC SECTION.
     INTERFACES if_oo_adt_classrun.
@@ -28,6 +28,8 @@ CLASS zcl_oauth_destinations IMPLEMENTATION.
 
     " Step 1: get access token
     DATA(access_token) = get_access_token( ).
+
+    out->write( access_token-access_token ).
 
     " Step 2: use it to call the protected resource
     call_backend( access_token ).

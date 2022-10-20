@@ -1,4 +1,4 @@
-" Sample code from the blog post https://jacekw.dev/blog/2022/oauth-from-abap-on-premise/
+" Sample code from the blog post https://jacekw.dev/blog/2022/oauth-client-credentials-from-abap-on-premise
 CLASS zcl_oauth_client DEFINITION PUBLIC FINAL CREATE PUBLIC.
   PUBLIC SECTION.
     INTERFACES if_oo_adt_classrun.
